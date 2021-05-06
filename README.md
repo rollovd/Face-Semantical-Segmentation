@@ -6,7 +6,7 @@ The main task is to segment face in several classes: background, nose, eyebrows,
 
 # Solution
 Apparently, the main task was connected with augmentations approaches: I used horizontal flip (face position won't change due to this fact), small RGB-shift (lightning), random crop (in order to limit out image).
-Then I encountered with the problem that proposal masks are in shape of rgb-tensors (num_channels $\times$ width $\times$ height). Therefore, I decided to transform them into the matrix, where each pixel corresponds to distinct class. I solved it via KMeans, since we had several points, where figures are not discrete (not 0, 127, 255). I thought about simple threshold, but it was like a "crutch" (due to the fact that each triple of values are always differ among themselves). 
+Then I encountered with the problem that proposal masks are in shape of rgb-tensors (num_channels x width x height). Therefore, I decided to transform them into the matrix, where each pixel corresponds to distinct class. I solved it via KMeans, since we had several points, where figures are not discrete (not 0, 127, 255). I thought about simple threshold, but it was like a "crutch" (due to the fact that each triple of values are always differ among themselves). 
 
 Below you'll be able to contemplate the obtained results on test script:
 
