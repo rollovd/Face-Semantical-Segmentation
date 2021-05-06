@@ -18,3 +18,6 @@ Below you'll be able to contemplate the obtained results on test script:
 | **DeepLab + MobileNet** | **V3** | 58.542 | 69.159 | 87.532 | 9.251 | 75.353
 
 Concerning the execution time **MobileNet** > **ResNet** (in terms of trade-off). In both test scripts **MobileNet** demonstrated better results, but initially during the training part **ResNet** attained higher figures.
+
+# How to use?
+In order to run test script you have to prepare two folders (rgb-image and corresponding mask (tensors)) with the same names (*.bmp*)
