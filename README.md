@@ -20,4 +20,5 @@ Below you'll be able to contemplate the obtained results on test script:
 Concerning the execution time **MobileNet** > **ResNet** (in terms of trade-off). In both test scripts **MobileNet** demonstrated better results, but initially during the training part **ResNet** attained higher figures.
 
 # How to use?
-In order to run test script you have to prepare two folders (rgb-image and corresponding mask (tensors)) with the same names (*.bmp*)
+In order to run test script you have to prepare two folders (rgb-image and corresponding mask (tensors)) with the same names (*.bmp*).
+Corresponding *.onnx* models will be saved automatically during running `!python test_model.py` in `test_script.py` notebook.
