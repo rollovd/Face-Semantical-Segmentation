@@ -11,6 +11,7 @@ Then I encountered with the problem that proposal masks are in shape of rgb-tens
 Below you'll be able to contemplate the obtained results on test script:
 
 | Model | Dataset | Mean IoU | Mean Class Acc | Mean Acc | Execution Time (CPU) | Total estimated model params size (MB)
+| ----- | ------- | -------- | -------------- | -------- | -------------------- | -------------------------------------
 | **DeepLab + ResNet** | **V2** | 67.086 | 83.675 | 89.854 | 61.017 | 254.553
 | **DeepLab + ResNet** | **V3** | 67.579 | 79.318 | 90.618 | 54.496 | 254.553
 | **DeepLab + MobileNet** | **V2** | 70.687 | 82.685 | 90.485 | 9.564 | 75.353
