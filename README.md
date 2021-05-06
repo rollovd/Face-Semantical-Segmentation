@@ -22,3 +22,4 @@ Concerning the execution time **MobileNet** > **ResNet** (in terms of trade-off)
 # How to use?
 In order to run test script you have to prepare two folders (rgb-image and corresponding mask (tensors)) with the same names (*.bmp*).
 Corresponding *.onnx* models will be saved automatically during running `!python test_model.py` in `test_script.py` notebook.
+I would like to asking for excuse in advance, since **DeepLab + MobileNet** doesn't support some methods during onnx-converting. Thus, only **DeepLab + Resnet** will be available.
