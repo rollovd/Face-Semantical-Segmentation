@@ -14,8 +14,8 @@ Below you'll be able to contemplate the obtained results on test script:
 | ----- | ------- | -------- | -------------- | -------- | -------------------- | -------------------------------------
 | **DeepLab + ResNet** | **V2** | 67.086 | 83.675 | 89.854 | 61.017 | 254.553
 | **DeepLab + ResNet** | **V3** | 67.579 | 79.318 | 90.618 | 54.496 | 254.553
-| **DeepLab + MobileNet** | **V2** | 70.687 | 82.685 | 90.485 | 9.564 | 75.353
-| **DeepLab + MobileNet** | **V3** | 58.542 | 69.159 | 87.532 | 9.251 | 75.353
+| **DeepLab + MobileNet** | **V2** | 70.687 | 82.685 | 90.485 | 9.564 | 45.112
+| **DeepLab + MobileNet** | **V3** | 58.542 | 69.159 | 87.532 | 9.251 | 45.112
 
 Concerning the execution time **MobileNet** > **ResNet** (in terms of trade-off). In both test scripts **MobileNet** demonstrated better results, but initially during the training part **ResNet** attained higher figures.
 
