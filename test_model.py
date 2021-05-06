@@ -9,8 +9,8 @@ from models import Model
 import torch
 
 
-def define_model(weights):
-    model = Model.load_from_checkpoint(weights)
+def define_model(weights, kmeans_weights):
+    model = Model.load_from_checkpoint(weights, rgb_mask_path=kmeans_weights)
     return model
 
 def _discrete_mask(mask, kmeans_weights):
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     if args.kmeans_weights:
         kmeans_weights = args.kmeans_weights
 
-    model = define_model(weights)
+    model = define_model(weights, kmeans_weights)
     images = define_test_images_batch(images_path, image_size)
     masks = define_test_masks_batch(masks_path, image_size, kmeans_weights)
 
@@ -95,6 +95,7 @@ if __name__ == '__main__':
     print('Mean IOU : {:.3%}'.format(mean_iou))
     print('Mean class ACC : {:.3%}'.format(mean_class_acc))
     print('Mean Acc : {:.3%}'.format(mean_acc))
+
 
 
 
