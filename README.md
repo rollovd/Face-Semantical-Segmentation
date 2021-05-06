@@ -21,6 +21,7 @@ Concerning the execution time **MobileNet** > **ResNet** (in terms of trade-off)
 
 # How to use?
 In order to run test script you have to prepare two folders (rgb-image and corresponding mask (tensors)) with the same names (*.bmp*).
+
 *.onnx* models can be found [here](/content/drive/MyDrive/oz/weights_onnx).
 
 I would like to asking for excuse in advance, since **DeepLab + MobileNet** doesn't support some methods during onnx-converting. Thus, only **DeepLab + Resnet** will be available.
