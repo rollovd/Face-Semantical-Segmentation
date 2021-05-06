@@ -13,6 +13,14 @@ def define_model(weights, kmeans_weights):
     model = Model.load_from_checkpoint(weights, rgb_mask_path=kmeans_weights)
     return model
 
+def model_to_onnx(model, name):
+    x = torch.randn(8, 3, 256, 256)
+    try:
+        torch.onnx.export(model, x, name + ".onnx")
+
+    except RuntimeError:
+        return None
+
 def _discrete_mask(mask, kmeans_weights):
 
     with open(kmeans_weights, 'rb') as f:
@@ -62,6 +70,7 @@ if __name__ == '__main__':
     parser.add_argument("-m", "--masks-path", default='', help='Mask test path')
     parser.add_argument('-s', "--image-size", default=256, help="Image size")
     parser.add_argument('-c', "--kmeans-weights", default='', help='Mask weights')
+    parser.add_argument('-o', "--onnx_name", default='', help='Model name in ONNX')
 
     args = parser.parse_args()
 
@@ -83,7 +92,12 @@ if __name__ == '__main__':
     if args.kmeans_weights:
         kmeans_weights = args.kmeans_weights
 
+    if args.onnx_name:
+        onnx_name = args.onnx_name
+
     model = define_model(weights, kmeans_weights)
+#     model_to_onnx(model, onnx_name)
+
     images = define_test_images_batch(images_path, image_size)
     masks = define_test_masks_batch(masks_path, image_size, kmeans_weights)
 
