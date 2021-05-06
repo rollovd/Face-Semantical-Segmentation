@@ -2,7 +2,7 @@
 Test task
 
 # Task
-The main task is to segment face in several classes: background, nose, eyebrows, ears, eyes, face. I used two models (**DeepLab + ResNet** and **DeepLab + MobileNet**) on [http://massimomauro.github.io/FASSEG-repository/](FASSEG dataset).
+The main task is to segment face in several classes: background, nose, eyebrows, ears, eyes, face. I used two models (**DeepLab + ResNet** and **DeepLab + MobileNet**) on [FASSEG dataset](http://massimomauro.github.io/FASSEG-repository/).
 
 # Solution
 Apparently, the main task was connected with augmentations approaches: I used horizontal flip (face position won't change due to this fact), small RGB-shift (lightning), random crop (in order to limit out image).
